@@ -6,13 +6,18 @@ read Version_ID
 
 
 sudo systemctl stop natpierce.service
+su deck
 
 echo "Stopping current natpierce service"
 
 echo "Downloading natpierce one binary..."
+
+
 mkdir -p $HOME/.natpierce && cd $HOME/.natpierce
 wget  "https://natpierce.oss-cn-beijing.aliyuncs.com/linux/natpierce-amd64-v$Version_ID.tar.gz" -O natpierce$Version_ID.tar.gz
 tar -xzvf natpierce$Version_ID.tar.gz
+
+
 echo "Configuring natpierce..."
 chmod +x natpierce
 
