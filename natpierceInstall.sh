@@ -5,10 +5,8 @@ echo "Enter Version ID:"
 read Version_ID
 
 
-sudo systemctl stop natpierce.service
-su deck
-
-echo "Stopping current natpierce service"
+# sudo systemctl stop natpierce.service
+# echo "Stopping current natpierce service"
 
 echo "Downloading natpierce one binary..."
 
