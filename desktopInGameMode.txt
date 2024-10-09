@@ -4,7 +4,7 @@ Steam Deck在游戏模式里面直接使用桌面模式(外接屏幕自适应分
 
 安装设置步骤：
 1.下载我提供的脚本desktopInGameMode.sh到桌面
-https://github.com/s6tiger/SteamdeckTinker/blob/294d4106752b099fd2db869f9731765856faa44d/desktopInGameMode.sh
+https://github.com/s6tiger/steamdeck_tinker/blob/320fd4fc6609eacb75c0ab448faf3e6a8bf78d1a/desktopInGameMode.sh
 2.右键属性，确认勾选可执行权限
 3.右键添加至Steam运行
 4.切换到游戏模式，找到库里的desktopInGameMode.sh运行即可。
