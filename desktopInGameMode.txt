@@ -1,0 +1,25 @@
+Steam Deck在游戏模式里面直接使用桌面模式(外接屏幕自适应分辨率，附下载)
+
+好处可以在玩游戏的同时，做桌面模式下做的事。我的脚本在steamos-nested-desktop.sh的基础上加入了外接屏幕自适应分辨率功能，不然外接大屏会遇到bug
+
+安装设置步骤：
+1.下载我提供的脚本desktopInGameMode.sh到桌面
+https://github.com/s6tiger/SteamdeckTinker/blob/294d4106752b099fd2db869f9731765856faa44d/desktopInGameMode.sh
+2.右键属性，确认勾选可执行权限
+3.右键添加至Steam运行
+4.切换到游戏模式，找到库里的desktopInGameMode.sh运行即可。
+
+如果有改图标插件的话，齿轮属性里面把名称从desktopInGameMode.sh改名成Steamdeck KDE Desktop然后就可一向我一样找到很多漂亮的库配图
+
+
+使用注意事项：
+1.退出的话，点击桌面的返回游戏模式，然后手柄点B退出。
+2.关于输入，由于是游戏模式，如果外接键盘的话千万不要Ctrl+C,会重启游戏模式，屏幕键盘中英文软键盘均可正常使用，物理键盘也可以正常使用
+3.由于Steam已经在游戏模式里面运行可能会打不开桌面模式的Steam，适合用于日常软件更新维护和设置。
+
+这个模式和桌面模式的本质区别是在wayland里面运行的桌面实例类似与gamescope运行桌面，桌面模式是X11运行的，兼容性可能不如X11，不影响日常使用,目前obs和虚拟屏幕暂时在这个模式里无法使用。
+
+-----------------------------------------------
+如果你只在Deck掌机上用，不需要适配外接大屏的话，只需进入桌面模式后打开konsole然后，运行这条命令即可：
+steamos-add-to-steam /usr/bin/steamos-nested-desktop.sh
+然后进入游戏模式在库里找steamos-nested-desktop.sh即可，其他同上。
