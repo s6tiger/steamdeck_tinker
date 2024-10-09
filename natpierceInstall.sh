@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 echo "Enter Version ID:"
@@ -11,8 +11,9 @@ read Version_ID
 echo "Downloading natpierce one binary..."
 
 
-mkdir -p $HOME/.natpierce && cd $HOME/.natpierce
+mkdir -p /home/deck/.natpierce && cd /home/deck/.natpierce
 wget  "https://natpierce.oss-cn-beijing.aliyuncs.com/linux/natpierce-amd64-v$Version_ID.tar.gz" -O natpierce$Version_ID.tar.gz
+
 tar -xzvf natpierce$Version_ID.tar.gz
 
 
@@ -29,12 +30,11 @@ sudo steamos-readonly disable
 sudo cat <<EOF > /etc/systemd/system/natpierce.service
 [Unit]
 Description=natpierce
-StartLimitIntervalSec=500
-StartLimitBurst=5
 After=network.target
 
 [Service]
 ExecStart=/bin/bash -c "sudo /home/deck/.natpierce/natpierce"
+ExecStop=/bin/bash -c "sudo killall natpierce"
 WorkingDirectory=/home/deck/.natpierce/
 Restart=on-failure
 
