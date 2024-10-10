@@ -9,7 +9,7 @@ read Version_ID
 # echo "Stopping current natpierce service"
 
 echo "Downloading natpierce one binary..."
-
+sudo killall natpierce
 
 mkdir -p /home/deck/.natpierce && cd /home/deck/.natpierce
 wget  "https://natpierce.oss-cn-beijing.aliyuncs.com/linux/natpierce-amd64-v$Version_ID.tar.gz" -O natpierce$Version_ID.tar.gz

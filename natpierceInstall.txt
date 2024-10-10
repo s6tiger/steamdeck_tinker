@@ -28,6 +28,9 @@ https://github.com/s6tiger/steamdeck_tinker/releases/download/v0.10/natpierceUni
 chmod +x /home/deck/Downloads/natpierceUninstall.sh
 sudo /home/deck/Downloads/natpierceUninstall.sh
 
+
+更新版本的话再执行步骤2的natpierceInstall.sh即可
+
 如果是修改过用户名的玩家，请输入
 chomd +x 然后把下载的文件拖进Konsole即可会显示
 sudo 然后把下载的文件拖进Konsole即可
