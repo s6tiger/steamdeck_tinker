@@ -77,3 +77,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now natpierce.service
 echo "Showing natpierce service status..."
 sudo systemctl status natpierce.service
+
+#scripted by s6tiger
