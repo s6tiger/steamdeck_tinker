@@ -19,3 +19,5 @@ sudo rm -r /home/deck/.natpierce/natpierce*
 sudo systemctl daemon-reload
 sudo systemctl reset-failed
 echo "Done!"
+
+#scripted by s6tiger
