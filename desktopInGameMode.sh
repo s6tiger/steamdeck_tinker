@@ -30,4 +30,4 @@ dbus-run-session startplasma-wayland
 rm $XDG_RUNTIME_DIR/nested_plasma/kwin_wayland_wrapper
 
 
-#scripted and edited by S6tiger
+#scripted and edited by s6tiger
