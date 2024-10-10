@@ -1,5 +1,5 @@
-#!/bin/sh
-set -e
+#!/bin/bash
+#set -e
 
 echo "Enter Version ID:"
 read Version_ID
@@ -78,4 +78,4 @@ sudo systemctl enable --now natpierce.service
 echo "Showing natpierce service status..."
 sudo systemctl status natpierce.service
 
-#scripted by s6tiger
+#Scipted by s6tiger

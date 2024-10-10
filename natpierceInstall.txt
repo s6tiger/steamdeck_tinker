@@ -5,10 +5,6 @@ SteamDeck皎月连安装及开机后台运行教程
 1.用浏览器下载安装和启动服务脚本,默认一般会保存在/home/deck/Downloads目录下
 https://github.com/s6tiger/steamdeck_tinker/releases/download/v0.10/natpierceInstall.sh
 
-GitHub不方便的可以迅雷网盘下载
-链接：https://pan.xunlei.com/s/VO8oZ66Zn8LyKN5c1Q7oXJbtA1?pwd=wxer#
-
-
 2.安装脚本,默认安装路径为/home/deck/.natpierce
 桌面模式左下角Deck图标菜单-系统-Konsole命令行终端
 输入:

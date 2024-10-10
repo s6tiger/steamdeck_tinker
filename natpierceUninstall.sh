@@ -20,4 +20,4 @@ sudo systemctl daemon-reload
 sudo systemctl reset-failed
 echo "Done!"
 
-#scripted by s6tiger
+#Scipted by s6tiger
