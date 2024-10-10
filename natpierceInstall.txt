@@ -1,0 +1,34 @@
+SteamDeck皎月连安装及开机后台运行
+
+进入桌面模式
+
+1.用浏览器下载安装和启动服务脚本,默认一般会保存在/home/deck/Downloads目录下
+https://github.com/s6tiger/steamdeck_tinker/releases/download/v0.10/natpierceInstall.sh
+
+2.安装脚本,默认安装路径为/home/deck/.natpierce
+桌面模式左下角Deck图标菜单-系统-Konsole命令行终端
+输入:
+chmod +x /home/deck/Downloads/natpierceInstall.sh
+sudo /home/deck/Downloads/natpierceInstall.sh
+
+根据提示输入版本号：
+如当前版本
+1.03
+回车
+
+3.测试服务运行
+打开浏览器访问后台即可
+默认为http://localhost:33272
+桌面模式和游戏模式均可使用
+
+4.下载卸载脚本卸载
+https://github.com/s6tiger/steamdeck_tinker/releases/download/v0.10/natpierceUninstall.sh
+桌面模式左下角Deck图标菜单-系统-Konsole命令行终端
+输入:
+chmod +x /home/deck/Downloads/natpierceUninstall.sh
+sudo /home/deck/Downloads/natpierceUninstall.sh
+
+如果是修改过用户名的玩家，请输入
+chomd +x 然后把下载的文件拖进Konsole即可会显示
+sudo 然后把下载的文件拖进Konsole即可
+修改了下载路径的也可自行修改路径输入
