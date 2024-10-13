@@ -1,25 +1,34 @@
-Steam Deck在游戏模式里面直接使用桌面模式(外接屏幕自适应分辨率，附下载)
+Steam Deck在游戏模式中使用桌面模式(自动适应外接屏幕分辨率，附下载)
 
-好处可以在玩游戏的同时，做桌面模式下做的事。我的脚本在steamos-nested-desktop.sh的基础上加入了外接屏幕自适应分辨率功能，不然外接大屏会遇到bug
+我在官方steamos-nested-desktop.sh的基础上加入了外接屏幕自适应分辨率和识别仅在游戏模式启动的功能，不然外接大屏会遇到屏幕下部分区域无法操作的bug。
+
+好处：
+可以在玩游戏的同时，做桌面模式下做的事。你可以在游戏模式里面几乎完成所有桌面的任务：
+1.有些在游戏模式里面不方便无头启动的需要用到UI元素的APP可以直接运行，比如sunshine之类，不用折腾无头模式了；
+2.可以享受游戏模式的诸多便利比如，可以对这个桌面app设置Steam控制器布局（我的控制器布局也分享到社区，你把APP名称设置成Steamdeck KDE Desktop就能在社区里面找到，我的按键布局适合纯deck操作），可以用游戏模式的内录和各类decky插件，可以很方便的用游戏模式的性能监控和设置调节。屏幕键盘支持更好；
+3.边打游戏边处理一些任务，浏览网页查资料，写代码，处理文档等等，discover更新，后台系统调试等等，并行不悖；
+4.这个桌面本质是wayland桌面，不同于桌面模式老旧的X11，比较新的桌面框架，具体好处可以自己查查；
+5.其实这个模式也是可以直接打游戏的，只要是非steam的都可以的，比如lutris的，因为steam已经在外面游戏模式运行了；
+6.享受游戏模式的休眠效率，满足很多人不愿意离开游戏模式的执念。
 
 安装设置步骤：
 1.下载我提供的脚本desktopInGameMode.sh到桌面
-https://github.com/s6tiger/steamdeck_tinker/blob/320fd4fc6609eacb75c0ab448faf3e6a8bf78d1a/desktopInGameMode.sh
-2.右键属性，确认勾选可执行权限
+https://github.com/s6tiger/steamdeck_tinker/releases/download/v0.10/desktopInGameMode.sh
+https://github.com/s6tiger/steamdeck_tinker/releases/download/v0.10/ibus.desktop
+2.右键属性，确认勾选可执行权限（ibus GUI.desktop也一样要给权限）
 3.右键添加至Steam运行
 4.切换到游戏模式，找到库里的desktopInGameMode.sh运行即可。
-
-如果有改图标插件的话，齿轮属性里面把名称从desktopInGameMode.sh改名成Steamdeck KDE Desktop然后就可一向我一样找到很多漂亮的库配图
-
+如果有Decky Loader SteamGridDB改图标插件的话，齿轮属性里面把名称从desktopInGameMode.sh改名成Steamdeck KDE Desktop然后就可找到很多漂亮的库配图
 
 使用注意事项：
 1.退出的话，点击桌面的返回游戏模式，然后手柄点B退出。
-2.关于输入，由于是游戏模式，如果外接键盘的话千万不要Ctrl+C,会重启游戏模式，屏幕键盘中英文软键盘均可正常使用，物理键盘也可以正常使用
+2.关于输入，由于是游戏模式，如果外接键盘的话千万不要长按Ctrl+C（可以短按）,会重启游戏模式，屏幕键盘中英文软键盘均可正常使用，物理键盘也可以正常使用
 3.由于Steam已经在游戏模式里面运行可能会打不开桌面模式的Steam，适合用于日常软件更新维护和设置。
+4.输入法，我会提供一个ibus的启动器，系统自带的ibus添加拼音就可使用，需要注意的是实体键盘可用，屏幕键盘也可用（屏幕键盘切换到en就可以使用）如果遇到程序无法输入，重新开关一下程序即可，ibus也可随时退出。自带屏幕键盘的中文模式输入是有问题的，绝大多数情况用ibus就好，中英文切换按下shift即可。
 
 这个模式和桌面模式的本质区别是在wayland里面运行的桌面实例类似与gamescope运行桌面，桌面模式是X11运行的，兼容性可能不如X11，不影响日常使用,目前obs和虚拟屏幕暂时在这个模式里无法使用。
 
 -----------------------------------------------
-如果你只在Deck掌机上用，不需要适配外接大屏的话，只需进入桌面模式后打开konsole然后，运行这条命令即可：
+如果你只在Deck掌机上用，不需要适配外接大屏的话，只需进入桌面模式后打开konsole然后，运行这条命令即可，这就是系统自带的桌面启动脚本：
 steamos-add-to-steam /usr/bin/steamos-nested-desktop.sh
 然后进入游戏模式在库里找steamos-nested-desktop.sh即可，其他同上。
