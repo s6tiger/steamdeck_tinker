@@ -1,5 +1,5 @@
-#!/bin/sh
-set -e
+#!/bin/bash
+#set -e
 
 echo "Enter Version ID:"
 read Version_ID
@@ -12,7 +12,7 @@ echo "Downloading natpierce one binary..."
 sudo killall natpierce
 
 mkdir -p /home/deck/.natpierce && cd /home/deck/.natpierce
-wget  "https://natpierce.oss-cn-beijing.aliyuncs.com/linux/natpierce-amd64-v$Version_ID.tar.gz" -O natpierce$Version_ID.tar.gz
+wget  "https://download.natpierce.cn/linux/natpierce-amd64-v$Version_ID.tar.gz" -O natpierce$Version_ID.tar.gz
 
 tar -xzvf natpierce$Version_ID.tar.gz
 
@@ -78,4 +78,4 @@ sudo systemctl enable --now natpierce.service
 echo "Showing natpierce service status..."
 sudo systemctl status natpierce.service
 
-#scripted by s6tiger
+#Scipted by s6tiger
